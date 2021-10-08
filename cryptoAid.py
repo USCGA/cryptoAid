@@ -21,3 +21,8 @@ def totient(x):
     else:
         n = [y for y in range(1,x) if is_coprime(x,y)]
         return len(n)
+
+def primRoots(modulo):
+    required_set = {num for num in range(1, modulo) if gcd(num, modulo) }
+    return [g for g in range(1, modulo) if required_set == {pow(g, powers, modulo)
+            for powers in range(1, modulo)}]
