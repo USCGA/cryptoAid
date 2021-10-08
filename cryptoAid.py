@@ -1,6 +1,5 @@
-# Calculates prime using mod 2 division
-def isPrime(val):
-    return val % 2 == 1
+def is_coprime(x, y):
+    return gcd(x, y) == 1
 
 # Calculates gcd using euclidean algorithm
 def gcd(x, y):
@@ -15,3 +14,10 @@ def modInverse(a, m):
         if (((a%m) * (x%m)) % m == 1):
             return x
     return -1
+
+def totient(x):
+    if x == 1:
+        return 1
+    else:
+        n = [y for y in range(1,x) if is_coprime(x,y)]
+        return len(n)
