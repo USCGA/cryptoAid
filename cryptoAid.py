@@ -1,5 +1,3 @@
-import math
-
 def is_coprime(x, y):
     return gcd(x, y) == 1
 
@@ -28,7 +26,6 @@ def primRoots(modulo):
     required_set = {num for num in range(1, modulo) if gcd(num, modulo) }
     return [g for g in range(1, modulo) if required_set == {pow(g, powers, modulo)
             for powers in range(1, modulo)}]
-
 
 def bigLittleLog(a,c,p,num_steps):
     # y ~= log base 28 of 74 (mod 257)
@@ -71,4 +68,4 @@ def bigLittleLog(a,c,p,num_steps):
     return solution
 
 
-print(bigLittleLog(28,74,257,20))
+print("is_coprime, gcd, modInverse, totient, primRoots, bigLittleLog")
