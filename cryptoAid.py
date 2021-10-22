@@ -1,3 +1,5 @@
+import math
+
 def is_coprime(x, y):
     return gcd(x, y) == 1
 
@@ -31,9 +33,9 @@ def bigLittleLog(a,c,p,num_steps):
     # y ~= log base 28 of 74 (mod 257)
     # X != log base a of c (mod p)
 
-    a = 28
-    c = 74
-    p = 257
+    # a = 28
+    # c = 74
+    # p = 257
 
     N = math.floor(pow(p-1,0.5)) + 1
     print(N)
