@@ -29,6 +29,10 @@ def primRoots(modulo):
     return [g for g in range(1, modulo) if required_set == {pow(g, powers, modulo)
             for powers in range(1, modulo)}]
 
+def solvePrimRoot(prim, modulo):
+    for x in range(modulo):
+        print(str(prim) + "^" + str(x) + " mod " + str(modulo) + " = " + str(pow(prim,x,modulo)))
+
 def bigLittleLog(a,c,p,num_steps):
     # y ~= log base 28 of 74 (mod 257)
     # X != log base a of c (mod p)
@@ -54,7 +58,7 @@ def bigLittleLog(a,c,p,num_steps):
         little_steps[x] = pow(a,x,p)
         big_steps[x] = (c * pow(a_negN,x)) % p
 
-        print(f"{little_steps[x]}\t{big_steps[x]}")
+        print(f"{x}\t{little_steps[x]}\t{big_steps[x]}")
 
         if(little_steps[x] in big_steps):
             print("Match found!")
@@ -69,5 +73,22 @@ def bigLittleLog(a,c,p,num_steps):
     solution = j + k * N
     return solution
 
+# python program to print prime factors
+def primeFactors(n):
+   #even number divisible
+   while n % 2 == 0:
+      print (2),
+      n = n / 2
 
-print("is_coprime, gcd, modInverse, totient, primRoots, bigLittleLog")
+   #n became odd
+   for i in range(3,int(math.sqrt(n))+1,2):
+
+      while (n % i == 0):
+         print (i)
+         n = n / i
+
+   if n > 2:
+      print (n)
+
+
+print("is_coprime, gcd, modInverse, totient, primRoots, bigLittleLog, solvePrimRoot, primeFactors")
