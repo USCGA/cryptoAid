@@ -30,8 +30,15 @@ def primRoots(modulo):
             for powers in range(1, modulo)}]
 
 def solvePrimRoot(prim, modulo):
+    results = [0]*modulo
     for x in range(modulo):
         print(str(prim) + "^" + str(x) + " mod " + str(modulo) + " = " + str(pow(prim,x,modulo)))
+        test = pow(prim,x,modulo)
+        if(test in results and not x == (modulo-1)):
+            print("Duplicate value found, not prim root")
+            return
+        results[x] = test
+    print("Prim Root Found!")
 
 def bigLittleLog(a,c,p,num_steps):
     # y ~= log base 28 of 74 (mod 257)
