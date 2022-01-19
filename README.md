@@ -2,7 +2,7 @@
 
 CryptoAid is a collection of python scripts (some custom, some borrowed with love from the internet) that are useful in hands-on cryptography. This library is designed to be implemented and referenced in scripts for competitions, projects, and anything else! Please note that some of the work in this repository is the original work of various team members, and should not be considered online material for purposes of academic integrity at CGA.
 
-## Instillation
+## Installation
 
 The intended use of this repository is to clone it to a local source, then call the python methods either in a live editor or in your own scripts.
 
